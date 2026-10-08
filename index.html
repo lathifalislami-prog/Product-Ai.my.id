@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductFilm AI | Master Prompt Video Produk Premium</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1079127784892803');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1079127784892803&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#111827', // Dark charcoal
+                        accent: '#F3F4F6', // Soft gray
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'subtle': '0 4px 20px -2px rgba(0,0,0,0.05)',
+                    },
+                    transitionTimingFunction: {
+                        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAFAFA;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        
+        /* Smooth Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px) scale(0.98);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        
+        /* Stagger Delays */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Glassmorphism utilities */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Image Object Fit Helpers */
+        .img-flexible-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 1.5rem;
+            padding: 1rem;
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        /* Video Play Button Overlay */
+        .play-overlay {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255,255,255,0.9);
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .video-card:hover .play-overlay {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #fff;
+        }
+
+        /* Hide specific elements initially */
+        #floating-cta { transform: translateY(150%); transition: transform 0.4s ease-out; }
+        #floating-cta.show { transform: translateY(0); }
+        
+        #sales-popup { transform: translateX(120%); transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); opacity: 0; }
+        #sales-popup.show { transform: translateX(0); opacity: 1; }
+
+        /* Accordion CSS */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="font-bold text-xl tracking-tight text-primary">PRODUCTFILM <span class="font-light">AI</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#cara-kerja" class="text-gray-600 hover:text-primary transition-colors text-sm font-medium">Cara Kerja</a>
+                    <a href="#showcase" class="text-gray-600 hover:text-primary transition-colors text-sm font-medium">Hasil Video</a>
+                    <a href="#bonus" class="text-gray-600 hover:text-primary transition-colors text-sm font-medium">Bonus</a>
+                    <a href="#faq" class="text-gray-600 hover:text-primary transition-colors text-sm font-medium">FAQ</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-premium">
+                <a href="#cara-kerja" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Cara Kerja</a>
+                <a href="#showcase" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Hasil Video</a>
+                <a href="#bonus" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Bonus</a>
+                <a href="#faq" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <div class="reveal">
+                <span class="inline-block py-1 px-3 rounded-full bg-gray-100 text-xs font-semibold text-gray-600 tracking-wider mb-6 border border-gray-200">
+                    AI MASTER PROMPT FOR PRODUCT VIDEO
+                </span>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-primary mb-6 reveal delay-100 leading-[1.1]">
+                Bikin Video Produk <br class="hidden md:block"/> yang Terlihat Mahal,<br class="hidden md:block"/> <span class="text-gray-400 font-light">Tanpa Harus Syuting.</span>
+            </h1>
+            
+            <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-500 mx-auto mb-10 reveal delay-200 font-light leading-relaxed">
+                Upload foto produk Anda dan biarkan ProductFilm AI menyusun Master Prompt Storyboard dan Master Prompt Video yang dirancang untuk menghasilkan konsep video iklan yang realistis, cinematic, dan profesional.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 reveal delay-300">
+                <a href="#showcase" class="w-full sm:w-auto px-8 py-4 bg-primary text-white rounded-full font-medium hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Lihat Contoh Hasil Video
+                </a>
+                <a href="#cara-kerja" class="w-full sm:w-auto px-8 py-4 bg-white text-primary rounded-full font-medium border border-gray-200 hover:bg-gray-50 transition-all">
+                    Lihat Cara Kerjanya
+                </a>
+            </div>
+
+            <!-- Hero Image Container Flexible -->
+            <div class="mt-20 max-w-3xl mx-auto reveal delay-400 px-4 sm:px-0">
+                <div class="img-flexible-container group">
+                    <img src="https://res.cloudinary.com/mffe56m7/image/upload/v1791424824/WhatsApp_Image_2026-10-08_at_09.59.09.jpg" 
+                         alt="ProductFilm AI Preview" 
+                         class="w-full h-auto object-contain rounded-xl transition-transform duration-700 group-hover:scale-[1.02] max-h-[70vh]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm font-medium text-gray-400 uppercase tracking-widest mb-10 reveal">
+                Dirancang untuk Affiliate, Seller & Creator
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="reveal delay-100 p-4">
+                    <div class="text-gray-800 font-semibold mb-1">Konsep Instan</div>
+                    <div class="text-sm text-gray-500">Lebih cepat menyusun ide</div>
+                </div>
+                <div class="reveal delay-200 p-4">
+                    <div class="text-gray-800 font-semibold mb-1">Prompt Terarah</div>
+                    <div class="text-sm text-gray-500">Minimalkan trial & error AI</div>
+                </div>
+                <div class="reveal delay-300 p-4">
+                    <div class="text-gray-800 font-semibold mb-1">Visual Premium</div>
+                    <div class="text-sm text-gray-500">Hasil cinematic & profesional</div>
+                </div>
+                <div class="reveal delay-400 p-4">
+                    <div class="text-gray-800 font-semibold mb-1">Workflow Siap Pakai</div>
+                    <div class="text-sm text-gray-500">Integrasi mulus ke AI Video</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold text-primary tracking-tight mb-4">Masalahnya Bukan Produk Anda. <br/><span class="text-gray-400 font-light">Masalahnya Cara Menampilkannya.</span></h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-subtle border border-gray-100 flex items-start gap-4 reveal delay-100 transform transition-transform hover:-translate-y-1">
+                    <span class="text-2xl font-light text-gray-300">01</span>
+                    <p class="text-lg text-gray-700 font-medium pt-1">Foto produk sudah bagus, tapi bingung bagaimana menjadikannya konsep video yang menarik.</p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-subtle border border-gray-100 flex items-start gap-4 reveal delay-200 transform transition-transform hover:-translate-y-1">
+                    <span class="text-2xl font-light text-gray-300">02</span>
+                    <p class="text-lg text-gray-700 font-medium pt-1">Mencoba membuat prompt AI sendiri, tapi hasilnya terlalu umum dan tidak fokus pada produk.</p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-subtle border border-gray-100 flex items-start gap-4 reveal delay-300 transform transition-transform hover:-translate-y-1">
+                    <span class="text-2xl font-light text-gray-300">03</span>
+                    <p class="text-lg text-gray-700 font-medium pt-1">Hasil video AI terlihat murahan, aneh, atau terlalu kental nuansa CGI-nya.</p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-subtle border border-gray-100 flex items-start gap-4 reveal delay-400 transform transition-transform hover:-translate-y-1">
+                    <span class="text-2xl font-light text-gray-300">04</span>
+                    <p class="text-lg text-gray-700 font-medium pt-1">Kesulitan memikirkan detail teknis seperti camera movement, lighting, dan storytelling visual.</p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-subtle border border-gray-100 flex items-start gap-4 reveal delay-500 transform transition-transform hover:-translate-y-1">
+                    <span class="text-2xl font-light text-gray-300">05</span>
+                    <p class="text-lg text-gray-700 font-medium pt-1">Membuang banyak waktu dan kredit AI hanya untuk menebak-nebak prompt yang pas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-white text-center">
+        <div class="max-w-4xl mx-auto px-4 reveal">
+            <h2 class="text-3xl font-bold mb-2">Di sinilah ProductFilm AI bekerja.</h2>
+            <p class="text-gray-500 text-xl font-light mb-16">Anda tidak perlu memulai dari halaman kosong.</p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+                <div class="p-6 bg-gray-50 rounded-2xl w-48 shadow-sm">
+                    <i class="fas fa-image text-3xl text-gray-400 mb-3"></i>
+                    <div class="font-medium">Foto Produk</div>
+                </div>
+                <i class="fas fa-arrow-right text-2xl text-gray-300 hidden md:block"></i>
+                <i class="fas fa-arrow-down text-2xl text-gray-300 block md:hidden"></i>
+                <div class="p-6 bg-gray-900 text-white rounded-2xl w-48 shadow-lg transform scale-105">
+                    <i class="fas fa-magic text-3xl text-gray-300 mb-3"></i>
+                    <div class="font-medium">Master Prompt</div>
+                </div>
+                <i class="fas fa-arrow-right text-2xl text-gray-300 hidden md:block"></i>
+                <i class="fas fa-arrow-down text-2xl text-gray-300 block md:hidden"></i>
+                <div class="p-6 bg-gray-50 rounded-2xl w-48 shadow-sm">
+                    <i class="fas fa-film text-3xl text-gray-400 mb-3"></i>
+                    <div class="font-medium">Video Iklan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cara-kerja" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-4xl font-bold text-primary tracking-tight mb-4">3 Langkah Sederhana.</h2>
+                <p class="text-xl text-gray-500 font-light">Dari foto produk menjadi konsep video yang matang.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10 relative">
+                <!-- Connecting Line Desktop -->
+                <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-px bg-gray-200"></div>
+
+                <div class="relative bg-white p-8 rounded-3xl shadow-premium text-center reveal delay-100 z-10">
+                    <div class="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-lg">1</div>
+                    <h3 class="text-xl font-bold mb-3">Upload Foto</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Masukkan foto produk terbaik yang ingin Anda jadikan bintang utama dalam video iklan.</p>
+                </div>
+                
+                <div class="relative bg-white p-8 rounded-3xl shadow-premium text-center reveal delay-200 z-10 md:transform md:-translate-y-4">
+                    <div class="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-lg">2</div>
+                    <h3 class="text-xl font-bold mb-3">AI Analyze & Build</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">ProductFilm AI memahami detail produk Anda dan menyusun struktur visual serta mood board yang sesuai.</p>
+                </div>
+
+                <div class="relative bg-white p-8 rounded-3xl shadow-premium text-center reveal delay-300 z-10">
+                    <div class="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-lg">3</div>
+                    <h3 class="text-xl font-bold mb-3">Dapatkan Konsep</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Terima Master Prompt Storyboard dan Master Prompt Video yang siap disalin ke workflow video generator Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                
+                <div class="w-full lg:w-1/2 reveal">
+                    <span class="text-sm font-bold tracking-widest text-gray-400 mb-4 block">OUTPUT 01</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Master Prompt Storyboard.</h2>
+                    <p class="text-lg text-gray-600 mb-8 font-light leading-relaxed">
+                        Rancang setiap scene sebelum video dibuat. Hindari pemborosan kredit AI dengan memiliki cetak biru visual yang terstruktur secara profesional.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-gray-700 font-medium">
+                            <i class="fas fa-check-circle text-gray-900"></i> Pembagian Scene (Scene Breakdown)
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 font-medium">
+                            <i class="fas fa-check-circle text-gray-900"></i> Tata Letak Produk (Product Positioning)
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 font-medium">
+                            <i class="fas fa-check-circle text-gray-900"></i> Sudut Kamera (Camera Angles)
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 font-medium">
+                            <i class="fas fa-check-circle text-gray-900"></i> Pencahayaan Studio (Studio Lighting)
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 font-medium">
+                            <i class="fas fa-check-circle text-gray-900"></i> Mood Sinematik (Cinematic Mood)
+                        </li>
+                    </ul>
+
+                    <button onclick="openImageModal('https://res.cloudinary.com/mffe56m7/image/upload/v1791430854/Barong_Bali_T-Shirt_Storyboard.png')" class="group flex items-center gap-3 text-gray-900 font-bold pb-1 border-b-2 border-gray-900 hover:text-gray-500 hover:border-gray-500 transition-colors">
+                        Lihat Hasil Storyboard 
+                        <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <div class="w-full lg:w-1/2 reveal delay-200">
+                    <div class="bg-gray-50 p-6 rounded-3xl shadow-premium border border-gray-100">
+                        <div class="space-y-4">
+                            <!-- Mockup Cards -->
+                            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1">S-01 | Pengenalan Utama</div>
+                                <div class="text-sm text-gray-700">Fokus makro pada detail dan tekstur produk dengan gerakan kamera perlahan.</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1">S-02 | Pencahayaan & Suasana</div>
+                                <div class="text-sm text-gray-700">Pencahayaan studio dramatis yang menyorot setiap lekuk dan keunggulan produk.</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1">S-03 | Interaksi Dinamis</div>
+                                <div class="text-sm text-gray-700">Efek gerakan dinamis (percikan, putaran, efek khusus) dengan kecepatan teratur.</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-50 opacity-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1">S-04 | Penutup Iklan</div>
+                                <div class="text-sm text-gray-700">Tampilan utama produk di posisi tengah dengan visual bersih dan profesional.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                
+                <div class="w-full lg:w-1/2 reveal">
+                    <span class="text-sm font-bold tracking-widest text-gray-400 mb-4 block">OUTPUT 02</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Master Prompt Video.</h2>
+                    <p class="text-lg text-gray-600 mb-6 font-light leading-relaxed">
+                        Setelah konsep visual tersusun, ProductFilm AI membantu menghasilkan Master Prompt Video yang sangat spesifik dan detail.
+                    </p>
+                    <p class="text-sm text-gray-500 mb-8 bg-white p-4 rounded-xl border border-gray-200 italic">
+                        "Dirancang khusus untuk disalin ke dalam workflow generate video seperti Google Flow, Kling, atau platform text-to-video lainnya."
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600">Camera Movement</span>
+                        <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600">Subject Motion</span>
+                        <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600">Cinematic Lighting</span>
+                        <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600">Product Consistency</span>
+                        <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600">Scene Transition</span>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 reveal delay-200">
+                    <div class="bg-white p-2 rounded-3xl shadow-premium border border-gray-100 relative overflow-hidden group cursor-pointer" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')"> <!-- Placeholder tutorial link as none provided, using generic struct -->
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-900 rounded-2xl relative overflow-hidden">
+                             <!-- Fallback/Mockup for Tutorial Video -->
+                             <img src="https://placehold.co/800x450/111827/ffffff?text=Tutorial+Penggunaan" alt="Tutorial" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500"></div>
+                             
+                             <div class="absolute inset-0 flex items-center justify-center">
+                                 <div class="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-300">
+                                     <i class="fas fa-play text-gray-900 text-xl ml-1"></i>
+                                 </div>
+                             </div>
+                             <div class="absolute bottom-4 left-4 right-4 text-white text-sm font-medium drop-shadow-md">
+                                 Lihat Cara Menggunakan Master Prompt
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="py-24 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">Bayangkan Produk Anda <br/><span class="text-gray-400 font-light">Dibuat Seperti Ini.</span></h2>
+                <p class="text-lg text-gray-400 font-light max-w-2xl mx-auto">Berikut adalah contoh konsep video iklan yang dapat direalisasikan menggunakan workflow Master Prompt.</p>
+            </div>
+
+            <!-- CSS Grid for Showcase -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Video Item 1 -->
+                <div class="video-card bg-gray-800 rounded-2xl overflow-hidden cursor-pointer reveal delay-100 relative group" onclick="openYTShort('zNHjrTKlkyc')">
+                    <img src="https://i.ytimg.com/vi/zNHjrTKlkyc/maxresdefault.jpg" class="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Video 1" onerror="this.src='https://placehold.co/400x600/333/fff?text=Video+1'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="play-overlay">
+                        <i class="fas fa-play text-gray-900"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text-xs font-bold text-gray-400 mb-1">SKINCARE</div>
+                        <div class="text-sm font-medium">Cinematic Product Reveal</div>
+                    </div>
+                </div>
+
+                <!-- Video Item 2 -->
+                <div class="video-card bg-gray-800 rounded-2xl overflow-hidden cursor-pointer reveal delay-200 relative group" onclick="openYTShort('PLW1jQwwYy8')">
+                    <img src="https://i.ytimg.com/vi/PLW1jQwwYy8/maxresdefault.jpg" class="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Video 2" onerror="this.src='https://placehold.co/400x600/333/fff?text=Video+2'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="play-overlay"><i class="fas fa-play text-gray-900"></i></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text-xs font-bold text-gray-400 mb-1">FASHION</div>
+                        <div class="text-sm font-medium">Dynamic Apparel Showcase</div>
+                    </div>
+                </div>
+
+                <!-- Video Item 3 -->
+                <div class="video-card bg-gray-800 rounded-2xl overflow-hidden cursor-pointer reveal delay-300 relative group" onclick="openYTShort('p8CJspj4CBc')">
+                    <img src="https://i.ytimg.com/vi/p8CJspj4CBc/maxresdefault.jpg" class="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Video 3" onerror="this.src='https://placehold.co/400x600/333/fff?text=Video+3'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="play-overlay"><i class="fas fa-play text-gray-900"></i></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text-xs font-bold text-gray-400 mb-1">BEVERAGE</div>
+                        <div class="text-sm font-medium">Slow Motion Splash</div>
+                    </div>
+                </div>
+
+                <!-- Video Item 4 -->
+                <div class="video-card bg-gray-800 rounded-2xl overflow-hidden cursor-pointer reveal delay-400 relative group" onclick="openYTShort('NSDW_U5p4eA')">
+                    <img src="https://i.ytimg.com/vi/NSDW_U5p4eA/maxresdefault.jpg" class="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Video 4" onerror="this.src='https://placehold.co/400x600/333/fff?text=Video+4'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="play-overlay"><i class="fas fa-play text-gray-900"></i></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text-xs font-bold text-gray-400 mb-1">ELECTRONICS</div>
+                        <div class="text-sm font-medium">Macro Detail Tour</div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 5 -->
+                <div class="video-card bg-gray-800 rounded-2xl overflow-hidden cursor-pointer reveal delay-100 relative group" onclick="openYTShort('0owXHGdS7H0')">
+                    <img src="https://i.ytimg.com/vi/0owXHGdS7H0/maxresdefault.jpg" class="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Video 5" onerror="this.src='https://placehold.co/400x600/333/fff?text=Video+5'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="play-overlay"><i class="fas fa-play text-gray-900"></i></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text-xs font-bold text-gray-400 mb-1">COSMETICS</div>
+                        <div class="text-sm font-medium">Elegant Lighting Setup</div>
+                    </div>
+                </div>
+
+                <!-- Video Item 6 -->
+                <div class="video-card bg-gray-800 rounded-2xl overflow-hidden cursor-pointer reveal delay-200 relative group" onclick="openYTShort('kiCQi93CXec')">
+                    <img src="https://i.ytimg.com/vi/kiCQi93CXec/maxresdefault.jpg" class="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Video 6" onerror="this.src='https://placehold.co/400x600/333/fff?text=Video+6'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="play-overlay"><i class="fas fa-play text-gray-900"></i></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text-xs font-bold text-gray-400 mb-1">FOOTWEAR</div>
+                        <div class="text-sm font-medium">Urban Environment Motion</div>
+                    </div>
+                </div>
+
+                <!-- Video Item 7 -->
+                <div class="video-card bg-gray-800 rounded-2xl overflow-hidden cursor-pointer reveal delay-300 relative group" onclick="openYTShort('VsJrv5kBbgU')">
+                    <img src="https://i.ytimg.com/vi/VsJrv5kBbgU/maxresdefault.jpg" class="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Video 7" onerror="this.src='https://placehold.co/400x600/333/fff?text=Video+7'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="play-overlay"><i class="fas fa-play text-gray-900"></i></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text-xs font-bold text-gray-400 mb-1">ACCESSORIES</div>
+                        <div class="text-sm font-medium">Luxury Sparkle Close-up</div>
+                    </div>
+                </div>
+
+                <!-- Video Item 8 -->
+                <div class="video-card bg-gray-800 rounded-2xl overflow-hidden cursor-pointer reveal delay-400 relative group" onclick="openYTShort('ILz3eD67LCw')">
+                    <img src="https://i.ytimg.com/vi/ILz3eD67LCw/maxresdefault.jpg" class="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Video 8" onerror="this.src='https://placehold.co/400x600/333/fff?text=Video+8'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="play-overlay"><i class="fas fa-play text-gray-900"></i></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text-xs font-bold text-gray-400 mb-1">FOOD</div>
+                        <div class="text-sm font-medium">Appetizing Action Shot</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-white overflow-hidden text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 tracking-tight reveal">Ini Bukan Sekadar Prompt Panjang.</h2>
+            
+            <div class="flex flex-wrap justify-center items-center gap-4 text-xl md:text-3xl font-bold tracking-tighter text-gray-200">
+                <span class="reveal delay-100 text-gray-900">IDE</span>
+                <i class="fas fa-caret-right reveal delay-100 text-sm"></i>
+                <span class="reveal delay-200 text-gray-900">STORYBOARD</span>
+                <i class="fas fa-caret-right reveal delay-200 text-sm"></i>
+                <span class="reveal delay-300 text-gray-900">VISUAL DIRECTION</span>
+                <i class="fas fa-caret-right reveal delay-300 text-sm hidden md:block"></i>
+                <span class="reveal delay-400 text-gray-900">CAMERA</span>
+                <i class="fas fa-caret-right reveal delay-400 text-sm"></i>
+                <span class="reveal delay-500 text-gray-900">LIGHTING</span>
+                <i class="fas fa-caret-right reveal delay-500 text-sm hidden md:block"></i>
+                <span class="reveal delay-600 text-gray-900">MOTION</span>
+                <i class="fas fa-caret-right reveal delay-600 text-sm"></i>
+                <span class="reveal delay-700 text-primary bg-accent px-4 py-2 rounded-lg">VIDEO</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-900 text-white border-b border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 text-center reveal">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Tunggu. ProductFilm AI Bukan Satu-Satunya yang Anda Dapatkan.</h2>
+            <p class="text-xl text-gray-400 font-light">Di dalam paket Rp99.000 ini, Anda juga mendapatkan beberapa AI tools tambahan untuk memaksimalkan workflow konten Anda.</p>
+        </div>
+    </section>
+
+    <section id="bonus" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-sm font-bold tracking-widest text-primary mb-2 block">BONUS EKSKLUSIF</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Lengkapi Workflow Konten Anda.</h2>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Bonus 01 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-3xl shadow-subtle border border-gray-100 reveal">
+                    <div class="w-full md:w-2/5">
+                        <img src="https://res.cloudinary.com/mffe56m7/image/upload/v1791432070/7.jpg" alt="Creator Pro AI" class="w-full h-auto rounded-2xl shadow-md">
+                    </div>
+                    <div class="w-full md:w-3/5">
+                        <div class="inline-block px-3 py-1 bg-gray-100 text-xs font-bold text-gray-500 rounded-full mb-4">BONUS 01</div>
+                        <h3 class="text-2xl font-bold mb-3">Creator Pro AI</h3>
+                        <p class="text-gray-600 mb-4">Partner virtual untuk mencari ide dan mengembangkan konten Anda agar tidak kehabisan materi.</p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li><i class="fas fa-check text-gray-800 mr-2"></i> Ide Konten & Penjualan</li>
+                            <li><i class="fas fa-check text-gray-800 mr-2"></i> Hook Generator</li>
+                            <li><i class="fas fa-check text-gray-800 mr-2"></i> Content Direction & Thumbnail</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bonus 02 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-8 rounded-3xl shadow-subtle border border-gray-100 reveal">
+                    <div class="w-full md:w-2/5">
+                        <img src="https://res.cloudinary.com/mffe56m7/image/upload/v1791432071/WhatsApp_Image_2026-10-08_at_11.59.55.jpg" alt="Mini Lab Studio" class="w-full h-auto rounded-2xl shadow-md">
+                    </div>
+                    <div class="w-full md:w-3/5">
+                        <div class="inline-block px-3 py-1 bg-gray-100 text-xs font-bold text-gray-500 rounded-full mb-4">BONUS 02</div>
+                        <h3 class="text-2xl font-bold mb-3">Mini Lab Studio</h3>
+                        <p class="text-gray-600 mb-4">Master Prompt khusus untuk membuat video bertema proses perakitan, transformasi, dan timelapse yang satisfying.</p>
+                        <p class="text-sm text-gray-500 italic">"Cocok untuk video motor dirakit dari komponen, bangunan dari lahan kosong, atau proses produksi bahan mentah."</p>
+                    </div>
+                </div>
+
+                <!-- Bonus 03 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-3xl shadow-subtle border border-gray-100 reveal">
+                    <div class="w-full md:w-2/5">
+                        <img src="https://res.cloudinary.com/mffe56m7/image/upload/v1791163025/1791162999874.jpg" alt="Voice Audio Pro AI" class="w-full h-auto rounded-2xl shadow-md">
+                    </div>
+                    <div class="w-full md:w-3/5">
+                        <div class="inline-block px-3 py-1 bg-gray-100 text-xs font-bold text-gray-500 rounded-full mb-4">BONUS 03</div>
+                        <h3 class="text-2xl font-bold mb-3">Voice Audio Pro AI</h3>
+                        <p class="text-gray-600 mb-4">Setelah visual selesai, lengkapi video dengan voiceover yang terdengar hidup, natural, dan profesional, bukan seperti robot kaku.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 text-center reveal">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">Hasil Pembuatan Mini Lab Studio</h2>
+            <p class="text-gray-500 mb-10 max-w-2xl mx-auto">Lihat langsung contoh konsep dan hasil video bertema proses, perakitan, dan transformasi yang dibuat menggunakan Master Prompt Mini Lab Studio.</p>
+            
+            <div class="flex justify-center">
+                <div class="w-full max-w-[340px] bg-white p-2 rounded-[2rem] shadow-premium border border-gray-100 group relative cursor-pointer" onclick="openYTShort('dQw4w9WgXcQ')"> <!-- Placeholder for vertical video as no specific ID provided, using generic -->
+                    <div class="aspect-[9/16] bg-gray-900 rounded-[1.5rem] relative overflow-hidden">
+                        <img src="https://placehold.co/720x1280/1a1a1a/fff?text=Mini+Lab+Process+Video" alt="Mini Lab Video" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div class="play-overlay"><i class="fas fa-play text-gray-900 text-xl ml-1"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl font-bold mb-3">Visual yang Bagus. Suara Juga Harus Bagus.</h2>
+                <p class="text-gray-500">Dengarkan contoh audio natural yang dihasilkan untuk melengkapi video produk Anda.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Audio Player 1 -->
+                <div class="bg-white p-4 rounded-2xl shadow-subtle flex items-center gap-4 reveal delay-100 border border-gray-100">
+                    <button class="audio-play-btn w-12 h-12 rounded-full bg-primary text-white flex-shrink-0 hover:scale-105 transition-transform" data-src="https://res.cloudinary.com/mffe56m7/video/upload/v1791428205/VoiceProAI_1791427659648.mp3">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="flex-grow">
+                        <div class="text-sm font-semibold mb-1">Voice Sample 01 - Energetic Promo</div>
+                        <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden relative cursor-pointer audio-progress-container">
+                            <div class="bg-primary h-full w-0 audio-progress-bar transition-all duration-100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Player 2 -->
+                <div class="bg-white p-4 rounded-2xl shadow-subtle flex items-center gap-4 reveal delay-200 border border-gray-100">
+                    <button class="audio-play-btn w-12 h-12 rounded-full bg-primary text-white flex-shrink-0 hover:scale-105 transition-transform" data-src="https://res.cloudinary.com/mffe56m7/video/upload/v1791428864/VoiceProAI_1791428818594.wav">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="flex-grow">
+                        <div class="text-sm font-semibold mb-1">Voice Sample 02 - Elegant Storytelling</div>
+                        <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden relative cursor-pointer audio-progress-container">
+                            <div class="bg-primary h-full w-0 audio-progress-bar transition-all duration-100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Player 3 -->
+                <div class="bg-white p-4 rounded-2xl shadow-subtle flex items-center gap-4 reveal delay-300 border border-gray-100">
+                    <button class="audio-play-btn w-12 h-12 rounded-full bg-primary text-white flex-shrink-0 hover:scale-105 transition-transform" data-src="https://res.cloudinary.com/mffe56m7/video/upload/v1791426213/VoiceProAI_1791426173872.wav">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="flex-grow">
+                        <div class="text-sm font-semibold mb-1">Voice Sample 03 - Professional Explainer</div>
+                        <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden relative cursor-pointer audio-progress-container">
+                            <div class="bg-primary h-full w-0 audio-progress-bar transition-all duration-100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Player 4 -->
+                <div class="bg-white p-4 rounded-2xl shadow-subtle flex items-center gap-4 reveal delay-400 border border-gray-100">
+                    <button class="audio-play-btn w-12 h-12 rounded-full bg-primary text-white flex-shrink-0 hover:scale-105 transition-transform" data-src="https://res.cloudinary.com/mffe56m7/video/upload/v1791425965/VoiceProAI_1791425892465.wav">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="flex-grow">
+                        <div class="text-sm font-semibold mb-1">Voice Sample 04 - Casual Review</div>
+                        <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden relative cursor-pointer audio-progress-container">
+                            <div class="bg-primary h-full w-0 audio-progress-bar transition-all duration-100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hidden Audio Element for Logic -->
+            <audio id="global-audio-player"></audio>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-gray-900 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Semua yang Anda Butuhkan untuk Memulai.</h2>
+                
+                <div class="bg-gray-800 rounded-2xl p-6 mb-8 border border-gray-700">
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i> <span class="font-medium">ProductFilm AI Access</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i> <span class="font-medium">Master Prompt Storyboard</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i> <span class="font-medium">Master Prompt Video</span></li>
+                        <li class="flex items-center gap-3 pt-4 border-t border-gray-700 text-gray-300"><i class="fas fa-gift text-gray-400"></i> Bonus: Creator Pro AI</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-gift text-gray-400"></i> Bonus: Mini Lab Studio</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-gift text-gray-400"></i> Bonus: Voice Audio Pro AI</li>
+                    </ul>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-sm text-gray-400 mb-1 uppercase tracking-widest font-bold">Harga Spesial Hari Ini</div>
+                    <div class="text-5xl md:text-6xl font-bold mb-8">Rp99.000</div>
+                    
+                    <a href="https://voiceproai.orderhero.id/form/form-order-voice-audio-proai" class="order-cta-btn inline-block w-full md:w-auto px-10 py-5 bg-white text-gray-900 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg transform hover:-translate-y-1">
+                        DAPATKAN PRODUCTFILM AI
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Guarantee/Trust -->
+            <div class="flex flex-wrap justify-center gap-6 mt-10 text-sm font-medium text-gray-500 reveal delay-200">
+                <span class="flex items-center gap-2"><i class="fas fa-shield-alt text-gray-400"></i> Mudah Digunakan</span>
+                <span class="flex items-center gap-2"><i class="fas fa-bolt text-gray-400"></i> Workflow Praktis</span>
+                <span class="flex items-center gap-2"><i class="fas fa-headset text-gray-400"></i> Support Tersedia</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 reveal">Pertanyaan yang Sering Diajukan</h2>
+            
+            <div class="space-y-4 reveal delay-100">
+                <!-- FAQ Item -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left font-semibold flex justify-between items-center focus:outline-none accordion-btn">
+                        <span>ProductFilm AI sebenarnya digunakan untuk apa?</span>
+                        <i class="fas fa-plus text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6 text-gray-600 text-sm">
+                        <div class="pb-5">
+                            ProductFilm AI adalah alat bantu untuk mengubah ide atau foto produk Anda menjadi struktur prompt yang sangat detail (Master Prompt Storyboard & Video). Prompt ini nantinya Anda gunakan di platform pembuat video AI untuk mendapatkan hasil yang cinematic dan profesional.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left font-semibold flex justify-between items-center focus:outline-none accordion-btn">
+                        <span>Apakah saya harus bisa membuat prompt sendiri?</span>
+                        <i class="fas fa-plus text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6 text-gray-600 text-sm">
+                        <div class="pb-5">
+                            Tidak. Justru itulah fungsi utama ProductFilm AI. Anda hanya perlu memberikan foto atau deskripsi sederhana, dan sistem kami yang akan merangkainya menjadi Master Prompt kompleks yang siap pakai.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left font-semibold flex justify-between items-center focus:outline-none accordion-btn">
+                        <span>Apakah bisa digunakan untuk produk affiliate atau Seller Marketplace?</span>
+                        <i class="fas fa-plus text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6 text-gray-600 text-sm">
+                        <div class="pb-5">
+                            Sangat bisa! Dirancang khusus untuk membantu Affiliate (Shopee, TikTok) dan Seller (Shopee, Tokopedia) yang ingin membuat materi promosi visual yang lebih menarik tanpa perlu menyewa studio atau peralatan mahal.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left font-semibold flex justify-between items-center focus:outline-none accordion-btn">
+                        <span>Apakah hasilnya langsung menjadi video?</span>
+                        <i class="fas fa-plus text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6 text-gray-600 text-sm">
+                        <div class="pb-5">
+                            Tidak. ProductFilm AI menghasilkan "Master Prompt" (teks instruksi sangat detail). Untuk merubahnya menjadi video, Anda menyalin Master Prompt tersebut ke platform AI Video Generator pihak ketiga (seperti Google Flow, Kling, Luma, dll).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left font-semibold flex justify-between items-center focus:outline-none accordion-btn">
+                        <span>Apakah saya mendapatkan bonus?</span>
+                        <i class="fas fa-plus text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6 text-gray-600 text-sm">
+                        <div class="pb-5">
+                            Ya, pembelian paket ini sudah termasuk akses ke Creator Pro AI, Mini Lab Studio, dan Voice Audio Pro AI.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white text-center">
+        <div class="max-w-3xl mx-auto px-4 reveal">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Foto Produk Anda Sudah Ada. <br/>Sekarang Saatnya Membuatnya Terlihat Lebih Mahal.</h2>
+            <p class="text-lg text-gray-500 mb-10 font-light">Mulai dari satu foto produk dan ubah menjadi konsep video iklan yang lebih terarah, cinematic, dan profesional.</p>
+            
+            <div class="text-2xl font-bold text-gray-400 line-through mb-1">Rp299.000</div>
+            <div class="text-4xl font-bold text-primary mb-8">Rp99.000</div>
+            
+            <a href="https://voiceproai.orderhero.id/form/form-order-voice-audio-proai" class="order-cta-btn inline-block px-10 py-5 bg-primary text-white rounded-full font-bold text-lg hover:bg-gray-800 transition-all shadow-[0_10px_30px_rgba(17,24,39,0.3)] transform hover:-translate-y-1">
+                DAPATKAN AKSES SEKARANG
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 py-12 border-t border-gray-200 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="font-bold text-xl tracking-tight text-primary mb-4">PRODUCTFILM <span class="font-light">AI</span></div>
+            <p class="text-sm text-gray-500 max-w-md mx-auto mb-8">AI Master Prompt untuk membantu membuat konsep video produk yang lebih cinematic, realistis, dan profesional.</p>
+            
+            <div class="flex justify-center space-x-6 mb-8 text-sm font-medium text-gray-600">
+                <a href="#cara-kerja" class="hover:text-primary transition-colors">Cara Kerja</a>
+                <a href="#bonus" class="hover:text-primary transition-colors">Bonus</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+            </div>
+            
+            <div class="text-xs text-gray-400">
+                &copy; 2026 ProductFilm AI. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div id="floating-cta" class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 shadow-[0_-10px_20px_rgba(0,0,0,0.05)] z-40 md:hidden flex justify-between items-center">
+        <div>
+            <div class="text-xs text-gray-500 font-medium">Spesial Offer</div>
+            <div class="text-lg font-bold text-primary">Rp99.000</div>
+        </div>
+        <a href="https://voiceproai.orderhero.id/form/form-order-voice-audio-proai" class="order-cta-btn px-6 py-3 bg-primary text-white rounded-full font-bold text-sm shadow-lg active:scale-95 transition-transform">
+            Mulai Sekarang
+        </a>
+    </div>
+
+    <div id="sales-popup" class="fixed top-6 right-6 z-50 bg-white p-4 rounded-xl shadow-premium border border-gray-100 flex items-center gap-4 max-w-[300px] pointer-events-none">
+        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-check text-green-600 text-lg"></i>
+        </div>
+        <div class="flex-grow">
+            <div id="popup-email" class="text-sm font-bold text-gray-800">user***@gmail.com</div>
+            <div class="text-xs text-gray-500">baru saja membeli ProductFilm AI</div>
+            <div id="popup-time" class="text-[10px] text-gray-400 mt-0.5">beberapa detik lalu</div>
+        </div>
+        <button id="close-popup-btn" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 pointer-events-auto">
+            <i class="fas fa-times text-xs"></i>
+        </button>
+    </div>
+
+    <div id="media-modal" class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-sm hidden items-center justify-center opacity-0 transition-opacity duration-300">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-white/70 hover:text-white text-3xl focus:outline-none z-10">
+            &times;
+        </button>
+        <div class="relative w-full max-w-5xl px-4 mx-auto flex justify-center items-center h-full">
+            <!-- Content will be injected here via JS -->
+            <div id="modal-content-container" class="w-full max-h-[90vh] flex justify-center items-center">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- 1. Reveal on Scroll Animation ---
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: stop observing once revealed for better performance
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // --- 2. Mobile Menu Toggle ---
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-link');
+            
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+            links.forEach(link => {
+                link.addEventListener('click', () => menu.classList.add('hidden'));
+            });
+
+            // --- 3. Navbar & Floating CTA Scroll Logic ---
+            const navbar = document.getElementById('navbar');
+            const floatingCta = document.getElementById('floating-cta');
+            const heroSection = document.getElementById('hero');
+            
+            window.addEventListener('scroll', () => {
+                // Navbar shadow
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-sm');
+                } else {
+                    navbar.classList.remove('shadow-sm');
+                }
+
+                // Floating CTA Mobile logic
+                if (heroSection) {
+                    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                    if (window.scrollY > heroBottom && window.innerWidth < 768) {
+                        floatingCta.classList.add('show');
+                    } else {
+                        floatingCta.classList.remove('show');
+                    }
+                }
+            });
+
+            // --- 4. FAQ Accordion ---
+            const accordions = document.querySelectorAll('.accordion-btn');
+            accordions.forEach(acc => {
+                acc.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    const content = this.nextElementSibling;
+                    
+                    // Close others (optional)
+                    accordions.forEach(otherAcc => {
+                        if(otherAcc !== this) {
+                            otherAcc.querySelector('i').classList.remove('rotate-45');
+                            otherAcc.nextElementSibling.style.maxHeight = null;
+                        }
+                    });
+
+                    icon.classList.toggle('rotate-45');
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // --- 5. Meta Pixel Tracking & CTA Clicks ---
+            const ctaButtons = document.querySelectorAll('.order-cta-btn');
+            ctaButtons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    // Menggunakan Custom Event ClickCTA untuk mencegah double tracking dengan form OrderHero
+                    if (typeof fbq === 'function') {
+                        fbq('trackCustom', 'ClickCTA');
+                    }
+                    // Let the default link behavior happen
+                });
+            });
+
+            // Scroll Depth Tracking
+            let scrollMarkers = { 25: false, 50: false, 75: false, 100: false };
+            window.addEventListener('scroll', () => {
+                let scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+                
+                if (scrollPercent >= 25 && !scrollMarkers[25]) { 
+                    if (typeof fbq === 'function') fbq('trackCustom', 'Scroll25%'); 
+                    scrollMarkers[25] = true; 
+                }
+                if (scrollPercent >= 50 && !scrollMarkers[50]) { 
+                    if (typeof fbq === 'function') fbq('trackCustom', 'Scroll50%'); 
+                    scrollMarkers[50] = true; 
+                }
+                if (scrollPercent >= 75 && !scrollMarkers[75]) { 
+                    if (typeof fbq === 'function') fbq('trackCustom', 'Scroll75%'); 
+                    scrollMarkers[75] = true; 
+                }
+                // Menggunakan threshold 95% ke atas sebagai 100% agar terpicu dengan stabil di browser mobile
+                if (scrollPercent >= 95 && !scrollMarkers[100]) { 
+                    if (typeof fbq === 'function') fbq('trackCustom', 'Scroll100%'); 
+                    scrollMarkers[100] = true; 
+                }
+            });
+
+            // --- 6. Custom Audio Player Logic ---
+            const audioPlayer = document.getElementById('global-audio-player');
+            const playBtns = document.querySelectorAll('.audio-play-btn');
+            let currentActiveBtn = null;
+
+            playBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const src = this.getAttribute('data-src');
+                    const icon = this.querySelector('i');
+                    const progressBar = this.nextElementSibling.querySelector('.audio-progress-bar');
+                    
+                    // If clicking the currently playing button
+                    if (currentActiveBtn === this && !audioPlayer.paused) {
+                        audioPlayer.pause();
+                        icon.className = 'fas fa-play';
+                        return;
+                    }
+
+                    // Reset all other buttons
+                    playBtns.forEach(b => b.querySelector('i').className = 'fas fa-play');
+                    
+                    // Setup new audio
+                    if(audioPlayer.src !== src) {
+                        audioPlayer.src = src;
+                    }
+                    
+                    audioPlayer.play();
+                    icon.className = 'fas fa-pause';
+                    currentActiveBtn = this;
+
+                    // Update Progress
+                    audioPlayer.ontimeupdate = () => {
+                        if(currentActiveBtn === this) {
+                            const percentage = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                            progressBar.style.width = percentage + '%';
+                        }
+                    };
+
+                    audioPlayer.onended = () => {
+                        icon.className = 'fas fa-play';
+                        progressBar.style.width = '0%';
+                        currentActiveBtn = null;
+                    }
+                });
+            });
+
+            // Seek logic for audio (optional but good UX)
+            document.querySelectorAll('.audio-progress-container').forEach(container => {
+                container.addEventListener('click', function(e) {
+                    const btn = this.parentElement.previousElementSibling;
+                    if(currentActiveBtn === btn) {
+                        const rect = this.getBoundingClientRect();
+                        const percent = (e.clientX - rect.left) / rect.width;
+                        audioPlayer.currentTime = percent * audioPlayer.duration;
+                    }
+                });
+            });
+
+
+            // --- 7. Sales Popup Logic ---
+            const popup = document.getElementById('sales-popup');
+            const popupEmail = document.getElementById('popup-email');
+            const popupTime = document.getElementById('popup-time');
+            const closePopupBtn = document.getElementById('close-popup-btn');
+            
+            const dummyEmails = [
+                "budi***@gmail.com", "siti***@yahoo.com", "arief***@hotmail.com", 
+                "dian***@gmail.com", "rendy***@outlook.com", "putri***@gmail.com",
+                "angga***@yahoo.com", "lisa***@gmail.com"
+            ];
+            const timeLabels = ["beberapa detik lalu", "1 menit yang lalu", "baru saja"];
+
+            let popupTimeout;
+            let isPopupClosedManually = false;
+
+            closePopupBtn.addEventListener('click', () => {
+                popup.classList.remove('show');
+                isPopupClosedManually = true; // Stop loop if user closes it
+            });
+
+            function showPopup() {
+                if (isPopupClosedManually) return;
+
+                // Randomize data
+                const randomEmail = dummyEmails[Math.floor(Math.random() * dummyEmails.length)];
+                const randomTime = timeLabels[Math.floor(Math.random() * timeLabels.length)];
+                
+                popupEmail.textContent = randomEmail;
+                popupTime.textContent = randomTime;
+
+                popup.classList.add('show');
+
+                // Hide after 5 seconds
+                setTimeout(() => {
+                    popup.classList.remove('show');
+                    
+                    // Schedule next popup (random 5-10s interval)
+                    const nextInterval = Math.floor(Math.random() * (10000 - 5000 + 1) + 5000);
+                    if(!isPopupClosedManually) {
+                        popupTimeout = setTimeout(showPopup, nextInterval);
+                    }
+                }, 5000);
+            }
+
+            // Initial delay of 15s
+            setTimeout(showPopup, 15000);
+        });
+
+        // --- 8. Modal Handlers (Global Scope for inline onclick) ---
+        const modal = document.getElementById('media-modal');
+        const modalContainer = document.getElementById('modal-content-container');
+
+        function openImageModal(url) {
+            modalContainer.innerHTML = `<img src="${url}" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl">`;
+            showModal();
+        }
+
+        function openVideoModal(url) {
+            modalContainer.innerHTML = `
+                <div class="relative w-full pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-2xl bg-black">
+                    <iframe src="${url}" class="absolute top-0 left-0 w-full h-full" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>`;
+            showModal();
+        }
+
+        function openYTShort(videoId) {
+            // Using standard youtube embed for shorts to ensure player controls work well in iframe
+            const url = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            modalContainer.innerHTML = `
+                <div class="relative h-[80vh] w-[45vh] max-w-full max-h-full rounded-2xl overflow-hidden shadow-2xl bg-black mx-auto">
+                    <iframe src="${url}" class="absolute top-0 left-0 w-full h-full" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>`;
+            showModal();
+        }
+
+        function showModal() {
+            modal.classList.remove('hidden');
+            // Small delay to allow display:block to apply before animating opacity
+            setTimeout(() => { modal.classList.remove('opacity-0'); }, 10);
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => { 
+                modal.classList.add('hidden'); 
+                modalContainer.innerHTML = ''; // Clear iframe to stop video playing
+                document.body.style.overflow = ''; 
+            }, 300);
+        }
+
+        // Close modal on click outside content
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) closeModal();
+        });
+        
+        // Escape key to close modal
+        document.addEventListener('keydown', (e) => {
+            if(e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
