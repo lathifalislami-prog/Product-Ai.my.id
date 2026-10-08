@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTFILM AI — Master Prompt Video Produk Cinematic</title>
+    <meta name="description" content="Master Prompt untuk membuat video produk yang terlihat mahal tanpa harus syuting. Ubah foto produk menjadi Master Prompt Storyboard & Video AI.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            600: '#2563eb',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            gold: '#d97706',
+                        }
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 30px rgba(0, 0, 0, 0.04)',
+                        'card-hover': '0 20px 40px -15px rgba(15, 23, 42, 0.08)',
+                        'glow': '0 0 25px rgba(37, 99, 235, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1079127784892803');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1079127784892803&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        /* Custom Smooth Reveal & Stagger Animation */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(24px) scale(0.98);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Staggered Delay Helpers */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8fafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Aspect Ratio Utilities */
+        .aspect-vertical {
+            aspect-ratio: 9 / 16;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-slate-900 selection:text-white">
+
+    <!-- RECENT ORDER NOTIFICATION (TOP-RIGHT) -->
+    <div id="sales-popup" class="fixed top-4 right-4 z-50 transform translate-x-full opacity-0 transition-all duration-500 max-w-sm w-full p-2 pointer-events-auto">
+        <div class="bg-white/95 backdrop-blur-md border border-slate-200/80 rounded-2xl shadow-xl p-4 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-slate-900" id="popup-email">latif***@gmail.com</p>
+                    <p class="text-xs text-slate-600">baru saja membeli <span class="font-semibold text-slate-900">ProductFilm AI</span></p>
+                    <span class="text-[10px] text-slate-400" id="popup-time">beberapa detik lalu</span>
+                </div>
+            </div>
+            <button onclick="hidePopup()" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg transition-colors">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 shadow-md shadow-slate-900/10 border border-slate-800/80 group-hover:scale-105 transition-transform duration-300">
+                    <!-- Subtle inner shine -->
+                    <div class="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-60"></div>
+                    <!-- Premium Film + AI Sparkle Icon -->
+                    <svg class="w-5 h-5 text-amber-400 relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="18" x="3" y="3" rx="2"/>
+                        <path d="M7 3v18"/>
+                        <path d="M3 7.5h4"/>
+                        <path d="M3 12h18"/>
+                        <path d="M3 16.5h4"/>
+                        <path d="M17 3v18"/>
+                        <path d="M17 7.5h4"/>
+                        <path d="M17 16.5h4"/>
+                    </svg>
+                    <!-- Small Glow Accent -->
+                    <span class="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
+                    </span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-lg sm:text-xl tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-700 to-amber-600">
+                        PRODUCTFILM <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-600 font-black">AI</span>
+                    </span>
+                    <span class="text-[9px] font-bold tracking-widest uppercase text-slate-400 mt-0.5">Cinematic Studio AI</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#cara-kerja" class="hover:text-slate-900 transition-colors">Cara Kerja</a>
+                <a href="#showcase" class="hover:text-slate-900 transition-colors">Hasil Video</a>
+                <a href="#bonus" class="hover:text-slate-900 transition-colors">Bonus</a>
+                <a href="#faq" class="hover:text-slate-900 transition-colors">FAQ</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="#cara-kerja" onclick="toggleMenu()" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Cara Kerja</a>
+            <a href="#showcase" onclick="toggleMenu()" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Hasil Video</a>
+            <a href="#bonus" onclick="toggleMenu()" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Bonus Eksklusif</a>
+            <a href="#faq" onclick="toggleMenu()" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-gradient-to-b from-white via-slate-50/50 to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Badge -->
+            <div class="reveal-element inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold tracking-wider uppercase mb-6">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-500"></i>
+                AI MASTER PROMPT FOR PRODUCT VIDEO
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="reveal-element delay-100 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-4xl mx-auto">
+                Bikin Video Produk yang Terlihat Mahal, <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900">Tanpa Harus Syuting Produk.</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="reveal-element delay-200 mt-6 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                Upload foto produk Anda dan biarkan ProductFilm AI menyusun <span class="font-semibold text-slate-800">Master Prompt Storyboard</span> dan <span class="font-semibold text-slate-800">Master Prompt Video</span> yang dirancang untuk menghasilkan konsep video iklan yang realistis, cinematic, dan profesional.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="reveal-element delay-300 mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#showcase" class="w-full sm:w-auto px-7 py-3.5 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-all duration-300 shadow-lg shadow-slate-900/10 flex items-center justify-center gap-2 group">
+                    <i data-lucide="play-circle" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                    Lihat Contoh Hasil Video
+                </a>
+                <a href="#cara-kerja" class="w-full sm:w-auto px-7 py-3.5 bg-white text-slate-700 font-semibold rounded-xl border border-slate-200 hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 flex items-center justify-center gap-2">
+                    Lihat Cara Kerjanya
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Hero Visual Frame (No Crop Flexible Container) -->
+            <div class="reveal-element delay-400 mt-12 md:mt-16 max-w-4xl mx-auto">
+                <div class="bg-white p-2 sm:p-3 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/60 inline-block w-full">
+                    <div class="rounded-xl sm:rounded-2xl overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img 
+                            src="https://res.cloudinary.com/mffe56m7/image/upload/v1791424824/WhatsApp_Image_2026-10-08_at_09.59.09.jpg" 
+                            alt="ProductFilm AI Preview" 
+                            class="w-full h-auto max-h-[600px] object-contain rounded-xl sm:rounded-2xl block mx-auto"
+                        />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION F: SOCIAL PROOF / HOOK -->
+    <section class="py-12 border-y border-slate-200/60 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs sm:text-sm font-semibold tracking-wider text-slate-500 uppercase mb-8">
+                Dirancang untuk affiliate & seller yang ingin membuat konten produk terlihat lebih profesional
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                <div class="reveal-element p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/60 text-center">
+                    <div class="w-10 h-10 mx-auto mb-3 rounded-xl bg-white shadow-sm border border-slate-200/60 flex items-center justify-center text-slate-900">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-sm sm:text-base font-bold text-slate-900">Lebih Cepat</h3>
+                    <p class="text-xs text-slate-500 mt-1">Menyusun konsep video instan</p>
+                </div>
+
+                <div class="reveal-element delay-100 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/60 text-center">
+                    <div class="w-10 h-10 mx-auto mb-3 rounded-xl bg-white shadow-sm border border-slate-200/60 flex items-center justify-center text-slate-900">
+                        <i data-lucide="target" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-sm sm:text-base font-bold text-slate-900">Prompt Terarah</h3>
+                    <p class="text-xs text-slate-500 mt-1">Sesuai standar studio iklan</p>
+                </div>
+
+                <div class="reveal-element delay-200 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/60 text-center">
+                    <div class="w-10 h-10 mx-auto mb-3 rounded-xl bg-white shadow-sm border border-slate-200/60 flex items-center justify-center text-slate-900">
+                        <i data-lucide="film" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-sm sm:text-base font-bold text-slate-900">Visual Cinematic</h3>
+                    <p class="text-xs text-slate-500 mt-1">Pencahayaan & kamera tepat</p>
+                </div>
+
+                <div class="reveal-element delay-300 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/60 text-center">
+                    <div class="w-10 h-10 mx-auto mb-3 rounded-xl bg-white shadow-sm border border-slate-200/60 flex items-center justify-center text-slate-900">
+                        <i data-lucide="cpu" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-sm sm:text-base font-bold text-slate-900">Workflow AI</h3>
+                    <p class="text-xs text-slate-500 mt-1">Siap pakai di Google Flow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION G: MASALAH TARGET MARKET -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-red-600 uppercase">REALITA LAPANGAN</span>
+                <h2 class="reveal-element text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+                    Masalahnya Bukan Produk Anda.<br>Masalahnya Cara Menampilkannya.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 01 -->
+                <div class="reveal-element p-6 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xs font-extrabold text-slate-400 tracking-wider">01</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2 mb-2">Bingung Eksekusi</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Foto produk sudah terlihat bagus, tapi selalu bingung ketika ingin mengubahnya menjadi video promosi yang menarik.
+                    </p>
+                </div>
+
+                <!-- Card 02 -->
+                <div class="reveal-element delay-100 p-6 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xs font-extrabold text-slate-400 tracking-wider">02</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2 mb-2">Prompt Terlalu Umum</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Mencoba generator AI biasa tapi prompt yang dihasilkan terlalu sederhana dan tidak memahami kaidah sinematografi iklan.
+                    </p>
+                </div>
+
+                <!-- Card 03 -->
+                <div class="reveal-element delay-200 p-6 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xs font-extrabold text-slate-400 tracking-wider">03</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2 mb-2">Hasil Terlihat AI / CGI</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Video AI yang dihasilkan sering kelihatan aneh, kaku, palsu, atau bahkan merusak bentuk asli dari produk Anda.
+                    </p>
+                </div>
+
+                <!-- Card 04 -->
+                <div class="reveal-element p-6 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
+                    <span class="text-xs font-extrabold text-slate-400 tracking-wider">04</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2 mb-2">Sulit Menyusun Scene</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Kesulitan menentukan arah gerakan kamera, lighting studio, dan jalan cerita agar iklan terlihat menjual.
+                    </p>
+                </div>
+
+                <!-- Card 05 -->
+                <div class="reveal-element delay-100 p-6 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+                    <span class="text-xs font-extrabold text-slate-400 tracking-wider">05</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2 mb-2">Pemborosan Kredit AI</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Harus mencoba menulis prompt puluhan kali secara trial-and-error sehingga menghabiskan kredit AI tanpa hasil yang memuaskan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION H: TRANSITION SECTION -->
+    <section class="py-16 bg-white border-y border-slate-200/60">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="reveal-element text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Di sinilah ProductFilm AI bekerja.
+            </h2>
+            <p class="reveal-element delay-100 text-base sm:text-lg text-slate-600 mt-3">
+                Anda tidak perlu memulai dari halaman kosong.
+            </p>
+
+            <!-- Visual Transform Line -->
+            <div class="reveal-element delay-200 mt-12 flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-8">
+                <div class="px-6 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm w-full md:w-auto shadow-sm">
+                    📷 FOTO PRODUK
+                </div>
+                <i data-lucide="arrow-right" class="w-6 h-6 text-slate-400 hidden md:block"></i>
+                <i data-lucide="arrow-down" class="w-6 h-6 text-slate-400 md:hidden"></i>
+                <div class="px-6 py-4 rounded-2xl bg-slate-900 text-white font-bold text-sm w-full md:w-auto shadow-md">
+                    ✨ MASTER PROMPT
+                </div>
+                <i data-lucide="arrow-right" class="w-6 h-6 text-slate-400 hidden md:block"></i>
+                <i data-lucide="arrow-down" class="w-6 h-6 text-slate-400 md:hidden"></i>
+                <div class="px-6 py-4 rounded-2xl bg-emerald-500 text-white font-bold text-sm w-full md:w-auto shadow-md">
+                    🎬 VIDEO IKLAN CINEMATIC
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION I: CARA KERJA PRODUCTFILM AI -->
+    <section id="cara-kerja" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">ALUR KERJA PRAKTIS</span>
+                <h2 class="reveal-element text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+                    3 Langkah dari Foto Produk Menjadi Konsep Video
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="reveal-element bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="w-12 h-12 rounded-xl bg-slate-900 text-white font-bold text-lg flex items-center justify-center mb-6">
+                        01
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Upload Foto Produk</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Masukkan foto produk apa saja yang ingin Anda promosikan. Baik produk fashion, makanan, elektronik, maupun aksesoris.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="reveal-element delay-100 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="w-12 h-12 rounded-xl bg-slate-900 text-white font-bold text-lg flex items-center justify-center mb-6">
+                        02
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">AI Analyze & Build</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        ProductFilm AI memahami detail produk dan menyusun struktur visual berdasarkan karakteristik keunggulan produk tersebut.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="reveal-element delay-200 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="w-12 h-12 rounded-xl bg-slate-900 text-white font-bold text-lg flex items-center justify-center mb-6">
+                        03
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Get Master Prompt</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Anda mendapatkan Master Prompt Storyboard & Master Prompt Video yang siap dimasukkan ke dalam workflow video AI pilihan Anda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION J: OUTPUT #1 — MASTER PROMPT STORYBOARD -->
+    <section class="py-20 bg-white border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="reveal-element">
+                    <span class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-bold tracking-wider uppercase mb-4">
+                        OUTPUT 01
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                        Master Prompt Storyboard
+                    </h2>
+                    <p class="text-slate-600 text-base leading-relaxed mb-6">
+                        Rancang setiap scene sebelum video dibuat. Menghindari pemborosan kredit AI dengan memiliki cetak biru visual yang terstruktur dengan sempurna.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                        <div class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Scene Breakdown
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Product Positioning
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Camera Angles
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Studio Lighting
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Environment Context
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Cinematic Mood
+                        </div>
+                    </div>
+
+                    <button onclick="openStoryboardModal()" class="px-6 py-3 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-colors inline-flex items-center gap-2">
+                        <i data-lucide="image" class="w-4 h-4"></i>
+                        Lihat Hasil Storyboard
+                    </button>
+                </div>
+
+                <!-- Right UI Mockup -->
+                <div class="reveal-element delay-200 bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-inner space-y-4">
+                    <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded">S-01 | Pengenalan Utama</span>
+                            <span class="text-[10px] text-slate-400 font-mono">HERO SHOT</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            "Fokus makro pada detail dan tekstur produk dengan gerakan kamera perlahan."
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded">S-02 | Lighting & Suasana</span>
+                            <span class="text-[10px] text-slate-400 font-mono">TRANSITION</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            "Pencahayaan studio dramatis yang menyorot setiap lekuk dan keunggulan produk."
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded">S-03 | Interaksi Dinamis</span>
+                            <span class="text-[10px] text-slate-400 font-mono">ACTION</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            "Efek gerakan dinamis (percikan, putaran, atau efek khusus) dengan kecepatan teratur."
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded">S-04 | Penutup Iklan</span>
+                            <span class="text-[10px] text-slate-400 font-mono">OUTRO</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            "Tampilan utama produk di posisi tengah dengan visual bersih dan profesional."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STORYBOARD MODAL POPUP -->
+    <div id="storyboard-modal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full bg-white rounded-2xl p-2 sm:p-4 shadow-2xl overflow-hidden">
+            <button onclick="closeStoryboardModal()" class="absolute top-4 right-4 z-10 bg-slate-900/80 hover:bg-slate-900 text-white p-2 rounded-full transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="max-h-[85vh] overflow-y-auto rounded-xl">
+                <img src="https://res.cloudinary.com/mffe56m7/image/upload/v1791430854/Barong_Bali_T-Shirt_Storyboard.png" alt="Storyboard Full View" class="w-full h-auto rounded-xl">
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION K: OUTPUT #2 — MASTER PROMPT VIDEO -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <span class="inline-block px-3 py-1 rounded-md bg-slate-200 text-slate-800 text-xs font-bold tracking-wider uppercase mb-4">
+                    OUTPUT 02
+                </span>
+                <h2 class="reveal-element text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    Master Prompt Video
+                </h2>
+                <p class="reveal-element delay-100 text-slate-600 text-base leading-relaxed">
+                    Setelah konsep visual tersusun, ProductFilm AI membantu menghasilkan Master Prompt Video yang lebih detail untuk workflow video generation.
+                </p>
+            </div>
+
+            <!-- Feature Pills -->
+            <div class="reveal-element delay-200 flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 max-w-4xl mx-auto">
+                <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Camera Movement</span>
+                <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Subject Movement</span>
+                <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Product Consistency</span>
+                <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Lighting & Shadows</span>
+                <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Cinematic Direction</span>
+                <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Environment</span>
+                <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Realistic Motion</span>
+                <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Commercial Visual Language</span>
+            </div>
+
+            <p class="text-center text-xs text-slate-500">
+                *Dirancang untuk digunakan dalam workflow generate video AI seperti Google Flow.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION L: SHOWCASE 8 VIDEO -->
+    <section id="showcase" class="py-20 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">HASIL GENERATE WORKFLOW</span>
+                <h2 class="reveal-element text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+                    Bayangkan Produk Anda Dibuat Seperti Ini
+                </h2>
+                <p class="reveal-element delay-100 text-slate-600 text-sm sm:text-base mt-2">
+                    Berikut contoh konsep video yang dapat dibuat menggunakan workflow Master Prompt.
+                </p>
+            </div>
+
+            <!-- Carousel Mobile / Grid Desktop 8 Video Shorts -->
+            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 -mx-4 px-4 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:overflow-visible sm:pb-0 sm:mx-0 sm:px-0 scrollbar-none">
+                
+                <!-- Video Item 1 -->
+                <div class="reveal-element bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all group flex-none w-[270px] sm:w-auto snap-center">
+                    <div class="relative aspect-vertical bg-slate-900 overflow-hidden">
+                        <iframe id="video-frame-1" class="w-full h-full hidden" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <div id="thumb-1" class="absolute inset-0 bg-cover bg-center cursor-pointer" style="background-image: url('https://img.youtube.com/vi/zNHjrTKlkyc/hqdefault.jpg');" onclick="playShowcaseVideo(1, 'zNHjrTKlkyc')">
+                            <div class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">Konsep Produk #01</span>
+                        <h4 class="text-sm font-bold text-slate-900 mt-0.5">Cinematic Commercial</h4>
+                    </div>
+                </div>
+
+                <!-- Video Item 2 -->
+                <div class="reveal-element delay-100 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all group flex-none w-[270px] sm:w-auto snap-center">
+                    <div class="relative aspect-vertical bg-slate-900 overflow-hidden">
+                        <iframe id="video-frame-2" class="w-full h-full hidden" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <div id="thumb-2" class="absolute inset-0 bg-cover bg-center cursor-pointer" style="background-image: url('https://img.youtube.com/vi/PLW1jQwwYy8/hqdefault.jpg');" onclick="playShowcaseVideo(2, 'PLW1jQwwYy8')">
+                            <div class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">Konsep Produk #02</span>
+                        <h4 class="text-sm font-bold text-slate-900 mt-0.5">Studio Macro Shot</h4>
+                    </div>
+                </div>
+
+                <!-- Video Item 3 -->
+                <div class="reveal-element delay-200 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all group flex-none w-[270px] sm:w-auto snap-center">
+                    <div class="relative aspect-vertical bg-slate-900 overflow-hidden">
+                        <iframe id="video-frame-3" class="w-full h-full hidden" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <div id="thumb-3" class="absolute inset-0 bg-cover bg-center cursor-pointer" style="background-image: url('https://img.youtube.com/vi/p8CJspj4CBc/hqdefault.jpg');" onclick="playShowcaseVideo(3, 'p8CJspj4CBc')">
+                            <div class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">Konsep Produk #03</span>
+                        <h4 class="text-sm font-bold text-slate-900 mt-0.5">Dynamic Motion</h4>
+                    </div>
+                </div>
+
+                <!-- Video Item 4 -->
+                <div class="reveal-element delay-300 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all group flex-none w-[270px] sm:w-auto snap-center">
+                    <div class="relative aspect-vertical bg-slate-900 overflow-hidden">
+                        <iframe id="video-frame-4" class="w-full h-full hidden" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <div id="thumb-4" class="absolute inset-0 bg-cover bg-center cursor-pointer" style="background-image: url('https://img.youtube.com/vi/NSDW_U5p4eA/hqdefault.jpg');" onclick="playShowcaseVideo(4, 'NSDW_U5p4eA')">
+                            <div class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">Konsep Produk #04</span>
+                        <h4 class="text-sm font-bold text-slate-900 mt-0.5">Luxury Showcase</h4>
+                    </div>
+                </div>
+
+                <!-- Video Item 5 -->
+                <div class="reveal-element bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all group flex-none w-[270px] sm:w-auto snap-center">
+                    <div class="relative aspect-vertical bg-slate-900 overflow-hidden">
+                        <iframe id="video-frame-5" class="w-full h-full hidden" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <div id="thumb-5" class="absolute inset-0 bg-cover bg-center cursor-pointer" style="background-image: url('https://img.youtube.com/vi/0owXHGdS7H0/hqdefault.jpg');" onclick="playShowcaseVideo(5, '0owXHGdS7H0')">
+                            <div class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">Konsep Produk #05</span>
+                        <h4 class="text-sm font-bold text-slate-900 mt-0.5">Aesthetic Slow Motion</h4>
+                    </div>
+                </div>
+
+                <!-- Video Item 6 -->
+                <div class="reveal-element delay-100 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all group flex-none w-[270px] sm:w-auto snap-center">
+                    <div class="relative aspect-vertical bg-slate-900 overflow-hidden">
+                        <iframe id="video-frame-6" class="w-full h-full hidden" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <div id="thumb-6" class="absolute inset-0 bg-cover bg-center cursor-pointer" style="background-image: url('https://img.youtube.com/vi/kiCQi93CXec/hqdefault.jpg');" onclick="playShowcaseVideo(6, 'kiCQi93CXec')">
+                            <div class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">Konsep Produk #06</span>
+                        <h4 class="text-sm font-bold text-slate-900 mt-0.5">3D Rotation Visual</h4>
+                    </div>
+                </div>
+
+                <!-- Video Item 7 -->
+                <div class="reveal-element delay-200 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all group flex-none w-[270px] sm:w-auto snap-center">
+                    <div class="relative aspect-vertical bg-slate-900 overflow-hidden">
+                        <iframe id="video-frame-7" class="w-full h-full hidden" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <div id="thumb-7" class="absolute inset-0 bg-cover bg-center cursor-pointer" style="background-image: url('https://img.youtube.com/vi/VsJrv5kBbgU/hqdefault.jpg');" onclick="playShowcaseVideo(7, 'VsJrv5kBbgU')">
+                            <div class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">Konsep Produk #07</span>
+                        <h4 class="text-sm font-bold text-slate-900 mt-0.5">Atmospheric Light</h4>
+                    </div>
+                </div>
+
+                <!-- Video Item 8 -->
+                <div class="reveal-element delay-300 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all group flex-none w-[270px] sm:w-auto snap-center">
+                    <div class="relative aspect-vertical bg-slate-900 overflow-hidden">
+                        <iframe id="video-frame-8" class="w-full h-full hidden" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <div id="thumb-8" class="absolute inset-0 bg-cover bg-center cursor-pointer" style="background-image: url('https://img.youtube.com/vi/ILz3eD67LCw/hqdefault.jpg');" onclick="playShowcaseVideo(8, 'ILz3eD67LCw')">
+                            <div class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">Konsep Produk #08</span>
+                        <h4 class="text-sm font-bold text-slate-900 mt-0.5">Premium Commercial</h4>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Mobile Swipe Hint -->
+            <div class="sm:hidden flex items-center justify-center gap-2 text-xs font-semibold text-slate-400 mt-4">
+                <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+                <span>Geser ke samping untuk melihat video lainnya</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESKTOP VIDEO LIGHTBOX MODAL -->
+    <div id="desktop-video-modal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="relative max-w-sm w-full bg-black rounded-2xl overflow-hidden shadow-2xl aspect-vertical">
+            <button onclick="closeDesktopVideoModal()" class="absolute top-3 right-3 z-10 bg-black/60 text-white p-2 rounded-full hover:bg-black transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <iframe id="modal-video-iframe" class="w-full h-full" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- SECTION M: SECTION "BUKAN SEKADAR PROMPT" -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">STANDAR KREATIF ELEGAN</span>
+            <h2 class="reveal-element text-3xl sm:text-5xl font-extrabold tracking-tight mt-2 mb-12">
+                Ini Bukan Sekadar Prompt Panjang.
+            </h2>
+
+            <div class="reveal-element delay-100 flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-sm sm:text-lg font-bold">
+                <span class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700">IDE</span>
+                <span class="text-slate-500">→</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700">STORYBOARD</span>
+                <span class="text-slate-500">→</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700">VISUAL DIRECTION</span>
+                <span class="text-slate-500">→</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700">CAMERA</span>
+                <span class="text-slate-500">→</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700">LIGHTING</span>
+                <span class="text-slate-500">→</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700">MOTION</span>
+                <span class="text-slate-500">→</span>
+                <span class="px-4 py-2 rounded-xl bg-emerald-500 text-white shadow-lg">VIDEO</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION N: PATTERN INTERRUPT -->
+    <section class="py-16 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="reveal-element text-2xl sm:text-4xl font-extrabold tracking-tight">
+                Tunggu. ProductFilm AI Bukan Satu-Satunya yang Anda Dapatkan.
+            </h2>
+            <p class="reveal-element delay-100 mt-4 text-amber-100 text-base sm:text-lg">
+                Di dalam paket Rp99.000 ini, Anda juga mendapatkan 3 AI tools tambahan untuk melengkapi seluruh workflow pembuatan konten produk Anda.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION O: BONUS SECTION -->
+    <section id="bonus" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">PAKET LENGKAP</span>
+                <h2 class="reveal-element text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+                    3 BONUS EKSKLUSIF
+                </h2>
+                <p class="reveal-element delay-100 text-slate-600 mt-2">
+                    Lengkapi workflow konten Anda dengan 3 AI tools tambahan tanpa biaya ekstra.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- BONUS 01 -->
+                <div class="reveal-element bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="p-3 bg-slate-100 flex items-center justify-center min-h-[220px]">
+                        <img src="https://res.cloudinary.com/mffe56m7/image/upload/v1791432070/7.jpg" alt="Bonus 01 Creator Pro AI" class="w-full h-auto max-h-60 object-contain rounded-xl block mx-auto">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded">BONUS 01</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2">CREATOR PRO AI</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Partner cerdas untuk mencari ide, mengembangkan angle penjualan, menyusun hook menarik, serta thumbnail generator.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-slate-700 space-y-1.5 font-medium">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Ide Konten & Ide Penjualan</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Hook Formulir Penjualan</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Direction & Thumbnail Prompt</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BONUS 02 -->
+                <div class="reveal-element delay-100 bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="p-3 bg-slate-100 flex items-center justify-center min-h-[220px]">
+                        <img src="https://res.cloudinary.com/mffe56m7/image/upload/v1791432071/WhatsApp_Image_2026-10-08_at_11.59.55.jpg" alt="Bonus 02 Mini Lab Studio" class="w-full h-auto max-h-60 object-contain rounded-xl block mx-auto">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded">BONUS 02</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2">MINI LAB STUDIO</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Master Prompt khusus untuk membuat video proses perakitan, transformasi, timelapse, dan pembongkaran produk.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-slate-700 space-y-1.5 font-medium">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Motor & Mobil Perakitan</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Proses Produksi Bahan Mentah</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Video Transformation & Timelapse</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BONUS 03 -->
+                <div class="reveal-element delay-200 bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="p-3 bg-slate-100 flex items-center justify-center min-h-[220px]">
+                        <img src="https://res.cloudinary.com/mffe56m7/image/upload/v1791163025/1791162999874.jpg" alt="Bonus 03 Voice Audio Pro AI" class="w-full h-auto max-h-60 object-contain rounded-xl block mx-auto">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded">BONUS 03</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2">VOICE AUDIO PRO AI</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Tambahkan voiceover profesional ke video Anda. Ubah teks skrip menjadi suara yang lebih natural dan emosional.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-slate-700 space-y-1.5 font-medium">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Voiceover Karakter Komersial</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Intonasi Natural Bahasa Indonesia</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Siap Diintegrasikan ke Editing</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION O-2: PREVIEW HASIL MINI LAB STUDIO (SHOWCASE VIDEO 9:16) -->
+    <section class="py-16 bg-white border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">DEMO BONUS MINI LAB STUDIO</span>
+                <h2 class="reveal-element text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-2">
+                    Hasil Pembuatan Mini Lab Studio
+                </h2>
+                <p class="reveal-element delay-100 text-slate-600 text-sm mt-2">
+                    Lihat langsung contoh konsep dan hasil video bertema proses, perakitan, dan transformasi yang dibuat menggunakan Master Prompt Mini Lab Studio.
+                </p>
+            </div>
+
+            <!-- Centered 9:16 Video Player Frame -->
+            <div class="reveal-element delay-200 max-w-[340px] mx-auto bg-slate-900 rounded-2xl p-2 shadow-2xl border border-slate-200 overflow-hidden">
+                <div class="relative aspect-vertical rounded-xl overflow-hidden bg-black">
+                    <iframe 
+                        class="w-full h-full" 
+                        src="https://www.youtube.com/embed/bMQrGmI3qeQ" 
+                        title="Hasil Pembuatan Mini Lab Studio" 
+                        frameborder="0" 
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION P: SAMPLE VOICE AUDIO PRO AI -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">SAMPLE AUDIO VOICEOVER</span>
+                <h2 class="reveal-element text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+                    Visual yang Bagus. Suara Juga Harus Bagus.
+                </h2>
+                <p class="reveal-element delay-100 text-slate-600 text-sm sm:text-base mt-2">
+                    Ini adalah contoh audio yang dapat digunakan untuk melengkapi video produk Anda.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+                <!-- Audio Player 1 -->
+                <div class="reveal-element p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <button onclick="toggleAudio(1)" id="audio-btn-1" class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 hover:bg-slate-800 transition-colors">
+                            <i data-lucide="play" class="w-4 h-4 fill-current ml-0.5"></i>
+                        </button>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Sample Voiceover #01</h4>
+                            <p class="text-xs text-slate-500">Gaya Promo Komersial</p>
+                        </div>
+                    </div>
+                    <audio id="audio-player-1" src="https://res.cloudinary.com/mffe56m7/video/upload/v1791428205/VoiceProAI_1791427659648.mp3"></audio>
+                </div>
+
+                <!-- Audio Player 2 -->
+                <div class="reveal-element delay-100 p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <button onclick="toggleAudio(2)" id="audio-btn-2" class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 hover:bg-slate-800 transition-colors">
+                            <i data-lucide="play" class="w-4 h-4 fill-current ml-0.5"></i>
+                        </button>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Sample Voiceover #02</h4>
+                            <p class="text-xs text-slate-500">Gaya Storytelling Naratif</p>
+                        </div>
+                    </div>
+                    <audio id="audio-player-2" src="https://res.cloudinary.com/mffe56m7/video/upload/v1791428864/VoiceProAI_1791428818594.wav"></audio>
+                </div>
+
+                <!-- Audio Player 3 -->
+                <div class="reveal-element delay-200 p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <button onclick="toggleAudio(3)" id="audio-btn-3" class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 hover:bg-slate-800 transition-colors">
+                            <i data-lucide="play" class="w-4 h-4 fill-current ml-0.5"></i>
+                        </button>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Sample Voiceover #03</h4>
+                            <p class="text-xs text-slate-500">Gaya Santai & Kasual</p>
+                        </div>
+                    </div>
+                    <audio id="audio-player-3" src="https://res.cloudinary.com/mffe56m7/video/upload/v1791426213/VoiceProAI_1791426173872.wav"></audio>
+                </div>
+
+                <!-- Audio Player 4 -->
+                <div class="reveal-element delay-300 p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <button onclick="toggleAudio(4)" id="audio-btn-4" class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 hover:bg-slate-800 transition-colors">
+                            <i data-lucide="play" class="w-4 h-4 fill-current ml-0.5"></i>
+                        </button>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Sample Voiceover #04</h4>
+                            <p class="text-xs text-slate-500">Gaya Energik & Antusias</p>
+                        </div>
+                    </div>
+                    <audio id="audio-player-4" src="https://res.cloudinary.com/mffe56m7/video/upload/v1791425965/VoiceProAI_1791425892465.wav"></audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION Q: VALUE STACK -->
+    <section id="penawaran-spesial" class="py-20 bg-white border-t border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-b from-slate-50 to-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-xl text-center">
+                <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">PENAWARAN SPESIAL</span>
+                <h2 class="reveal-element text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2 mb-8">
+                    Semua yang Anda Butuhkan untuk Memulai
+                </h2>
+
+                <div class="text-left space-y-4 max-w-lg mx-auto mb-10 divide-y divide-slate-100">
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-sm font-semibold text-slate-800">✅ ProductFilm AI (Akses Utuh)</span>
+                        <span class="text-xs text-slate-400 line-through">Rp299.000</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-3">
+                        <span class="text-sm font-semibold text-slate-800">✅ Master Prompt Storyboard</span>
+                        <span class="text-xs text-slate-400 line-through">Rp199.000</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-3">
+                        <span class="text-sm font-semibold text-slate-800">✅ Master Prompt Video AI</span>
+                        <span class="text-xs text-slate-400 line-through">Rp199.000</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-3">
+                        <span class="text-sm font-semibold text-slate-800">🎁 Bonus #1: Creator Pro AI</span>
+                        <span class="text-xs text-emerald-600 font-bold">GRATIS</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-3">
+                        <span class="text-sm font-semibold text-slate-800">🎁 Bonus #2: Mini Lab Studio</span>
+                        <span class="text-xs text-emerald-600 font-bold">GRATIS</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-3">
+                        <span class="text-sm font-semibold text-slate-800">🎁 Bonus #3: Voice Audio Pro AI</span>
+                        <span class="text-xs text-emerald-600 font-bold">GRATIS</span>
+                    </div>
+                </div>
+
+                <!-- Price Box -->
+                <div class="my-6">
+                    <span class="text-xs font-semibold text-slate-500">Harga Keseluruhan Hanya</span>
+                    <div class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mt-1">
+                        Rp99.000
+                    </div>
+                    <span class="text-[11px] text-slate-400 mt-1 block">Satu kali bayar. Tanpa biaya langganan bulanan.</span>
+                </div>
+
+                <a href="https://voiceproai.orderhero.id/form/form-order-productfilm-ai" onclick="handleCtaClick(event, 'https://voiceproai.orderhero.id/form/form-order-productfilm-ai')" class="block w-full max-w-md mx-auto py-4 bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-base sm:text-lg rounded-xl shadow-lg shadow-slate-900/20 transition-all transform hover:-translate-y-0.5">
+                    DAPATKAN PRODUCTFILM AI SEKARANG
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION R: GUARANTEE / TRUST -->
+    <section class="py-12 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h3 class="text-lg font-bold text-slate-900">Jaminan Kepuasan & Support Workflow</h3>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-center">
+                <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700">
+                    ✓ Mudah Digunakan
+                </div>
+                <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700">
+                    ✓ Workflow Praktis
+                </div>
+                <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700">
+                    ✓ Affiliate & Seller
+                </div>
+                <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700">
+                    ✓ Support Ramah
+                </div>
+                <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 col-span-2 md:col-span-1">
+                    ✓ Bonus Lengkap
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION S: FAQ -->
+    <section id="faq" class="py-20 bg-white border-t border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">INFORMASI LENGKAP</span>
+                <h2 class="reveal-element text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+                    Pertanyaan yang Sering Diajukan
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <span>ProductFilm AI sebenarnya digunakan untuk apa?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-1" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-1" class="hidden p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 bg-white">
+                        ProductFilm AI adalah alat berbasis AI yang membantu mengubah foto produk biasa menjadi Master Prompt Storyboard dan Master Prompt Video terstruktur. Gunakan untuk merancang visual video promosi yang terlihat mahal dan sinematik.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <span>Apakah saya harus bisa membuat prompt sendiri?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-2" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-2" class="hidden p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 bg-white">
+                        Tidak perlu. ProductFilm AI akan secara otomatis menganalisis produk Anda dan menyusunkan seluruh kalimat prompt teknis (kamera, lighting, angle, motion) secara otomatis.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <span>Apakah bisa digunakan untuk produk affiliate?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-3" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-3" class="hidden p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 bg-white">
+                        Sangat cocok! Bagi affiliate Shopee atau TikTok, Anda cukup mengambil foto produk dari etalase toko lalu mengubahnya menjadi video promosi cinematic yang menarik calon pembeli.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <span>Apakah bisa digunakan untuk produk Shopee atau Tokopedia?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-4" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-4" class="hidden p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 bg-white">
+                        Bisa untuk semua jenis marketplace dan kategori produk, mulai dari fashion, kecantikan, barang elektronik, kuliner, hingga aksesoris.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(5)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <span>Apa perbedaan Master Prompt Storyboard dan Master Prompt Video?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-5" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-5" class="hidden p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 bg-white">
+                        Storyboard memberikan gambaran babak visual (breakdown scene S-01, S-02, dst) sebelum diproses, sedangkan Master Prompt Video adalah instruksi teknis mendalam (motion, lighting, camera move) untuk platform generator video AI.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(6)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <span>Apakah hasilnya langsung menjadi video?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-6" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-6" class="hidden p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 bg-white">
+                        Jujur dan transparan: ProductFilm AI menghasilkan Master Prompt Storyboard & Master Prompt Video terstruktur. Anda kemudian menyalin prompt tersebut ke dalam platform video AI favorit Anda seperti Google Flow atau generator AI pilihan Anda.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(7)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <span>Apakah saya mendapatkan bonus?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-7" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-7" class="hidden p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 bg-white">
+                        Ya! Anda langsung mendapatkan 3 bonus sekaligus: Creator Pro AI, Mini Lab Studio, dan Voice Audio Pro AI tanpa ada biaya tambahan.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(8)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <span>Berapa harganya?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-8" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-8" class="hidden p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 bg-white">
+                        Hanya Rp99.000 satu kali bayar untuk akses penuh beserta seluruh bonusnya.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION T: FINAL CTA -->
+    <section class="py-20 bg-slate-900 text-white text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="reveal-element text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                Foto Produk Anda Sudah Ada.<br>Sekarang Saatnya Membuatnya Terlihat Lebih Mahal.
+            </h2>
+            <p class="reveal-element delay-100 text-slate-400 text-base sm:text-lg mt-6 max-w-2xl mx-auto">
+                Mulai dari satu foto produk dan ubah menjadi konsep video iklan yang lebih terarah, cinematic, dan profesional.
+            </p>
+
+            <div class="reveal-element delay-200 mt-8">
+                <span class="text-3xl font-black text-white">Rp99.000</span>
+            </div>
+
+            <div class="reveal-element delay-300 mt-6">
+                <a href="https://voiceproai.orderhero.id/form/form-order-productfilm-ai" onclick="handleCtaClick(event, 'https://voiceproai.orderhero.id/form/form-order-productfilm-ai')" class="inline-block px-10 py-4 bg-white text-slate-900 hover:bg-slate-100 font-extrabold text-lg rounded-xl shadow-2xl transition-all transform hover:-translate-y-0.5">
+                    DAPATKAN AKSES SEKARANG
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION U: FOOTER -->
+    <footer class="py-12 bg-white border-t border-slate-200 text-slate-600 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <span class="font-bold text-slate-900 text-base tracking-tight">PRODUCTFILM AI</span>
+                    <p class="text-xs text-slate-500 mt-1 max-w-sm">
+                        AI Master Prompt untuk membantu membuat konsep video produk yang lebih cinematic, realistis, dan profesional.
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+                    <a href="#cara-kerja" class="hover:text-slate-900">Cara Kerja</a>
+                    <a href="#showcase" class="hover:text-slate-900">Hasil Video</a>
+                    <a href="#bonus" class="hover:text-slate-900">Bonus</a>
+                    <a href="#faq" class="hover:text-slate-900">FAQ</a>
+                    <a href="https://voiceproai.orderhero.id/form/form-order-productfilm-ai" onclick="handleCtaClick(event, 'https://voiceproai.orderhero.id/form/form-order-productfilm-ai')" class="font-bold text-slate-900">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-slate-100 text-center text-xs text-slate-400">
+                © 2026 ProductFilm AI. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SECTION Y: FLOATING CTA (MOBILE ONLY) -->
+    <div id="floating-cta" class="fixed bottom-4 left-4 right-4 z-40 md:hidden transform translate-y-24 opacity-0 transition-all duration-300">
+        <a href="https://voiceproai.orderhero.id/form/form-order-productfilm-ai" onclick="handleCtaClick(event, 'https://voiceproai.orderhero.id/form/form-order-productfilm-ai')" class="flex items-center justify-between px-5 py-3.5 bg-slate-900 text-white font-bold rounded-2xl shadow-2xl">
+            <div class="flex flex-col">
+                <span class="text-xs font-normal text-slate-300">Akses ProductFilm AI</span>
+                <span class="text-sm font-extrabold">Rp99.000</span>
+            </div>
+            <span class="text-xs bg-white text-slate-900 px-3 py-1.5 rounded-xl font-extrabold flex items-center gap-1">
+                Mulai Sekarang <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </span>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT & LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. CTA CLICK TRACKING WITH META PIXEL
+        function handleCtaClick(e, url) {
+            e.preventDefault();
+            if (typeof fbq !== 'undefined') {
+                fbq('trackCustom', 'ClickCTA');
+            }
+            setTimeout(function() {
+                window.location.href = url;
+            }, 150);
+        }
+
+        // 2. SCROLL DEPTH TRACKING (25%, 50%, 75%, 100%)
+        const scrollTracked = { '25': false, '50': false, '75': false, '100': false };
+        window.addEventListener('scroll', function() {
+            const winHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight - winHeight;
+            const scrollTop = window.scrollY;
+            const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+            [25, 50, 75, 100].forEach(percent => {
+                if (scrollPercent >= percent && !scrollTracked[percent]) {
+                    scrollTracked[percent] = true;
+                    if (typeof fbq !== 'undefined') {
+                        fbq('trackCustom', 'Scroll' + percent + '%');
+                    }
+                }
+            });
+
+            // Toggle Mobile Floating CTA visibility - hanya muncul saat mencapai Penawaran Spesial
+            const offerSection = document.getElementById('penawaran-spesial');
+            const floatingCta = document.getElementById('floating-cta');
+            if (offerSection && floatingCta) {
+                const offerTop = offerSection.getBoundingClientRect().top;
+                if (offerTop <= window.innerHeight) {
+                    floatingCta.classList.remove('translate-y-24', 'opacity-0');
+                } else {
+                    floatingCta.classList.add('translate-y-24', 'opacity-0');
+                }
+            }
+        });
+
+        // 3. SMOOTH REVEAL ANIMATIONS ON SCROLL
+        const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-element').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 4. MOBILE NAVIGATION TOGGLE
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        document.getElementById('menu-btn').addEventListener('click', toggleMenu);
+
+        // 5. STORYBOARD MODAL LIGHTBOX
+        function openStoryboardModal() {
+            document.getElementById('storyboard-modal').classList.remove('hidden');
+        }
+        function closeStoryboardModal() {
+            document.getElementById('storyboard-modal').classList.add('hidden');
+        }
+
+        // 6. SHOWCASE 8 VIDEO INTERACTION (DESKTOP MODAL VS MOBILE INLINE)
+        function playShowcaseVideo(index, youtubeId) {
+            const isMobile = window.innerWidth < 768;
+            if (isMobile) {
+                // Inline Playback for Mobile
+                const thumb = document.getElementById(`thumb-${index}`);
+                const frame = document.getElementById(`video-frame-${index}`);
+                thumb.classList.add('hidden');
+                frame.classList.remove('hidden');
+                frame.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
+            } else {
+                // Lightbox Modal for Desktop
+                const modal = document.getElementById('desktop-video-modal');
+                const iframe = document.getElementById('modal-video-iframe');
+                iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function closeDesktopVideoModal() {
+            const modal = document.getElementById('desktop-video-modal');
+            const iframe = document.getElementById('modal-video-iframe');
+            iframe.src = '';
+            modal.classList.add('hidden');
+        }
+
+        // 7. AUDIO PLAYER TOGGLE (VOICE AUDIO PRO AI)
+        let currentPlayingAudio = null;
+        let currentPlayingIndex = null;
+
+        function toggleAudio(index) {
+            const player = document.getElementById(`audio-player-${index}`);
+            const btn = document.getElementById(`audio-btn-${index}`);
+
+            if (currentPlayingAudio && currentPlayingAudio !== player) {
+                currentPlayingAudio.pause();
+                currentPlayingAudio.currentTime = 0;
+                document.getElementById(`audio-btn-${currentPlayingIndex}`).innerHTML = `<i data-lucide="play" class="w-4 h-4 fill-current ml-0.5"></i>`;
+                lucide.createIcons();
+            }
+
+            if (player.paused) {
+                player.play();
+                btn.innerHTML = `<i data-lucide="pause" class="w-4 h-4 fill-current"></i>`;
+                currentPlayingAudio = player;
+                currentPlayingIndex = index;
+            } else {
+                player.pause();
+                btn.innerHTML = `<i data-lucide="play" class="w-4 h-4 fill-current ml-0.5"></i>`;
+                currentPlayingAudio = null;
+                currentPlayingIndex = null;
+            }
+            lucide.createIcons();
+        }
+
+        // 8. FAQ ACCORDION TOGGLE
+        function toggleFaq(index) {
+            const ans = document.getElementById(`faq-ans-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            const isHidden = ans.classList.contains('hidden');
+
+            if (isHidden) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // 9. RECENT ORDER NOTIFICATION POPUP (TOP-RIGHT RECURRING LOOP)
+        const dummyBuyers = [
+            { email: "latif***@gmail.com", time: "beberapa detik lalu" },
+            { email: "adam***@yahoo.com", time: "1 menit lalu" },
+            { email: "dina***@gmail.com", time: "2 menit lalu" },
+            { email: "budi***@gmail.com", time: "3 menit lalu" },
+            { email: "sari***@hotmail.com", time: "beberapa detik lalu" },
+            { email: "fajar***@gmail.com", time: "4 menit lalu" },
+            { email: "rizky***@yahoo.com", time: "beberapa detik lalu" },
+            { email: "megan***@gmail.com", time: "5 menit lalu" }
+        ];
+
+        let popupIndex = 0;
+
+        function showPopup() {
+            const popup = document.getElementById('sales-popup');
+            const emailElem = document.getElementById('popup-email');
+            const timeElem = document.getElementById('popup-time');
+
+            const currentBuyer = dummyBuyers[popupIndex];
+            emailElem.innerText = currentBuyer.email;
+            timeElem.innerText = currentBuyer.time;
+
+            popup.classList.remove('translate-x-full', 'opacity-0');
+
+            // Hide after 5 seconds
+            setTimeout(() => {
+                hidePopup();
+                // Schedule next display after random interval between 5s - 10s
+                const nextDelay = Math.floor(Math.random() * 5000) + 5000;
+                popupIndex = (popupIndex + 1) % dummyBuyers.length;
+                setTimeout(showPopup, nextDelay);
+            }, 5000);
+        }
+
+        function hidePopup() {
+            const popup = document.getElementById('sales-popup');
+            popup.classList.add('translate-x-full', 'opacity-0');
+        }
+
+        // Start initial popup after 15 seconds
+        setTimeout(showPopup, 15000);
+    </script>
+</body>
+</html>
